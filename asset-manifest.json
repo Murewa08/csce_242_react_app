@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/csce_242_react_app/static/css/main.be6ea011.css",
+    "main.js": "/csce_242_react_app/static/js/main.b61e1b55.js",
+    "index.html": "/csce_242_react_app/index.html",
+    "main.be6ea011.css.map": "/csce_242_react_app/static/css/main.be6ea011.css.map",
+    "main.b61e1b55.js.map": "/csce_242_react_app/static/js/main.b61e1b55.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be6ea011.css",
+    "static/js/main.b61e1b55.js"
+  ]
+}
