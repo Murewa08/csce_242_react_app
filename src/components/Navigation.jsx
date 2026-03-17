@@ -7,6 +7,11 @@ const Navigation = () => {
             <ul className="columns">
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/About">About</Link></li>
+                <li><Link to="/MHome">Original Home</Link></li>
+                <li><Link to="Reviews">Reviews</Link></li>
+                <li><Link to="About Us">About Us</Link></li>
+                <li><Link to="FAQ">FAQ</Link></li>
+                <li><Link to="/Help">Help</Link></li>
             </ul>
         </nav>
     );

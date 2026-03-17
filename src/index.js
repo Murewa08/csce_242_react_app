@@ -4,7 +4,12 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import './index.css';
 import Layout from "./Layout"
 import Home from "../src/pages/Home";
-import About from "../src/pages/About"
+import About from "../src/pages/About";
+import MHome from "../src/pages/MHome";
+import Reviews from "../src/pages/Reviews";
+import AboutUs from "../src/pages/About Us";
+import FAQ from "../src/pages/FAQ";
+import Help from "../src/pages/Help";
 
 const App = () => {
   return (
@@ -12,10 +17,13 @@ const App = () => {
       <Routes>
         <Route path = "/" element = {<Layout />}>
           <Route index element={<Home />}></Route>
-          <Route path="about" element={<About />}>
-          </Route>
-
-          </Route>
+          <Route path="about" element={<About />}></Route>
+          <Route path="mhome" element={<MHome />}></Route>
+          <Route path="reviews" element={<Reviews />}></Route>
+          <Route path="about us" element={<AboutUs />}></Route>
+          <Route path="faq" element={<FAQ />}></Route>
+          <Route path="help" element={<Help />}></Route>
+        </Route>
       </Routes>
     </BrowserRouter>
   );
