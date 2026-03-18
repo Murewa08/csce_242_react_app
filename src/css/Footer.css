@@ -1,0 +1,26 @@
+#main-footer {
+    display: flex;
+    background: #EDBABA;
+    align-content: center; /* Puts the contact section in the center of the footer*/
+
+}
+
+.mini-header {
+    font-size: 36px;
+    margin-top: 10px;
+}
+
+.info {
+    font-size: 24px;
+}
+
+.info-section {
+    display: block;
+    text-align: center;
+    border-radius: 15px;
+    border: 2px black solid;
+    font-family: "Playfair Display", sans-serif;
+    background: #F6A67D;
+    height: 200px;
+    width: 310px;
+}
