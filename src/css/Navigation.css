@@ -5,6 +5,7 @@
 #main-nav a {
     text-decoration: none;
     color: #6B7A8F;
+    font-family: "Playfair Display", sans-serif;
 }
 
 #main-nav a:hover {
