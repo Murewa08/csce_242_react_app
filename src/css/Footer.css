@@ -2,7 +2,20 @@
     display: flex;
     background: #EDBABA;
     align-content: center; /* Puts the contact section in the center of the footer*/
+    gap: 30px;
 
+}
+
+.mini-header {
+    font-size: 36px;
+    margin-top: 10px;
+}
+
+#contact-section {
+    justify-self: center;
+    display: flex;
+    gap: 80px;
+    margin: 30px;
 }
 
 .mini-header {
@@ -23,4 +36,5 @@
     background: #F6A67D;
     height: 200px;
     width: 310px;
+    margin: 20px;
 }
