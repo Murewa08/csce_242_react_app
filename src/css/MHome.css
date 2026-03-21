@@ -16,7 +16,7 @@ body {
 }
 
 #page-content {
-    background: var(--primary);
+    background: #F8D7E0;
     font-family: "Poppins", sans-serif;
     text-align: center;
     font-size: 45px;

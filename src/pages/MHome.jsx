@@ -1,14 +1,16 @@
 import "../css/MHome.css";
+import NewYorkImage from "../images/NewYorkImage.png";
+import HeaderImage from "../images/HeaderImage.png";
 
 const MHelp = () => {
     return (
     <body id="content">
         <main id="page-content">
-            <img id="header-img" src={"../src/images/Header image.png"}/>
+            <img id="header-img" src={HeaderImage}/>
             <div class="destinations-row">
                 <div class="dest-info">
                     <a href="help-index.html">
-                        <img src={"../src/images/New York image.png"}/>
+                        <img src={NewYorkImage}/>
                     </a>
                     <a href="help-index.html">
                         <p>New York, US</p>
