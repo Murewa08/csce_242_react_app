@@ -1,9 +1,10 @@
 import "../css/FAQ.css";
+import FAQHeader5 from "../images/FAQHeader5.png";
 
 const FAQ = () => {
     return (
         <body>
-        <img id="header-img" src={"./images/FAQ header5.png"}/>
+        <img id="header-img" src={FAQHeader5}/>
         <main id="page-content">
             <div id="questions-background">
                 <p class="question">How do I create an account?</p>
