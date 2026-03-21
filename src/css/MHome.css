@@ -15,12 +15,14 @@ body {
     width: 100%;
 }
 
-#page-content {
-    background: #F8D7E0;
+#page-content-mhome {
+    background: linear-gradient(0deg, var(--primary), var(--secondary), var(--primary));
     font-family: "Poppins", sans-serif;
     text-align: center;
     font-size: 45px;
     margin-top: -5px;
+    display: block;
+    margin-bottom: -4%;
 }
 
 .destinations-row {

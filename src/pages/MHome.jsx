@@ -1,11 +1,16 @@
 import "../css/MHome.css";
 import NewYorkImage from "../images/NewYorkImage.png";
 import HeaderImage from "../images/HeaderImage.png";
+import TokyoImage from "../images/TokyoImage.png";
+import BaliImage from "../images/BaliImage.png";
+import EnglandImage from "../images/EnglandImage.webp";
+import SwitzerlandImage from "../images/SwitzerlandImage.webp";
+import AustraliaImage from "../images/AustraliaImage.jpg";
 
 const MHelp = () => {
     return (
     <body id="content">
-        <main id="page-content">
+        <main id="page-content-mhome">
             <img id="header-img" src={HeaderImage}/>
             <div class="destinations-row">
                 <div class="dest-info">
@@ -17,25 +22,25 @@ const MHelp = () => {
                     </a>
                 </div>
                 <div class="dest-info">
-                    <img src={"../src/images/Tokyo Image.png"}/>
+                    <img src={TokyoImage}/>
                     <p>Tokyo, Japan</p>
                 </div>
                 <div class="dest-info">
-                    <img src={"../src/images/Bali Image.png"}/>
+                    <img src={BaliImage}/>
                     <p>Bali, Indonesia</p>
                 </div>
             </div>
             <div class="destinations-row" id="row-2">
                 <div class="dest-info">
-                    <img src={"../src/images/England image.webp"}/>
+                    <img src={EnglandImage}/>
                     <p>England, UK</p>
                 </div>
                 <div class="dest-info">
-                    <img src={"../src/images/Switzerland image.webp"}/>
+                    <img src={SwitzerlandImage}/>
                     <p>Bern, Switzerland</p>
                 </div>
                 <div class="dest-info">
-                    <img src={"../src/images/Australia image.jpg"}/>
+                    <img src={AustraliaImage}/>
                     <p>Sydney, Australia</p>
                 </div>
             </div>
