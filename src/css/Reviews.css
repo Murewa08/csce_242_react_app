@@ -16,9 +16,10 @@ body {
     width: 100%;
 }
 
-#page-content {
+#page-content-reviews {
     font-family: "Playfair Display", sans-serif;
     text-align: center;
+    display: block;
     margin-top: -5px;
     background: linear-gradient(45deg, var(--primary), var(--secondary-4), 
     var(--primary), var(--secondary-4), var(--primary), var(--secondary-4), 
