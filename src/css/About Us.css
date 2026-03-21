@@ -49,11 +49,12 @@ body {
     height: 600px;
 }
 
-#page-content {
+#page-content-AboutUs {
     font-family: "Poppins", sans-serif;
     text-align: center;
     font-size: 45px;
     margin-top: -5px;
+    display: block;
 }
 
 #who-we-are-background {

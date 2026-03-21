@@ -1,4 +1,5 @@
 import "../css/About Us.css";
+import AboutUsHeaderImage from "../images/AboutUsHeaderImage.png";
 
 const AboutUs = () => {
     return (
@@ -7,12 +8,12 @@ const AboutUs = () => {
                 {/*<button id="previous" class="arrow" type="button">&lt;</button>
                 <button id="next" class="arrow" type="button">&gt;</button>*/}
                 <div id="slides">
-                    <img src={"images/About Us header image.png"} alt="cliff"/>
-                    <img src={"images/About Us Image 2.png"} alt="zip lining" class="hidden"/>
-                    <img src={"images/About Us Image 3.png"} alt="restaurant" class="hidden" id="image-3"/>
+                    <img src={AboutUsHeaderImage} alt="cliff"/>
+                    {/*<img src={"images/About Us Image 2.png"} alt="zip lining" class="hidden"/>
+                    <img src={"images/About Us Image 3.png"} alt="restaurant" class="hidden" id="image-3"/>*/}
                 </div>
             </div>
-            <main id="page-content">
+            <main id="page-content-AboutUs">
                 <div id="who-we-are-background">
                     <div class="card" id="who-we-are-card">
                         <h4>WHO WE ARE</h4>
