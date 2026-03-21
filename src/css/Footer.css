@@ -3,6 +3,7 @@
     background: #EDBABA;
     align-content: center; /* Puts the contact section in the center of the footer*/
     justify-content: space-between;
+    padding: 20px;
 
 }
 
@@ -24,5 +25,4 @@
     background: #F6A67D;
     height: 200px;
     width: 310px;
-    margin: 20px;
 }

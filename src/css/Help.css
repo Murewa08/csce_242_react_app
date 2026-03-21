@@ -85,3 +85,28 @@ label {
 #map {
     height: 400px;
 }
+
+@media (max-width: 1020px) {
+    main {
+        display: block;
+        justify-content: space-evenly;
+    }
+
+    .box {
+        justify-self: center;
+        height: 550px;
+    }
+
+    main {
+        margin-top: -5%;
+        margin-bottom: -5%;
+    }
+    /*
+    #toggle-open {
+        display: block;
+    }
+
+    #toggle-close {
+        display: none;
+    }*/
+}
