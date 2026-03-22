@@ -75,3 +75,65 @@ body {
     font-weight: bold;
     margin-left: 13px;
 }
+
+@media (max-width: 1200px) {
+    .review {
+        height: 340px;
+        margin-top: 10px;
+        align-content: center;
+    }
+
+    .stars-row {
+        margin-top: -10px;
+    }
+
+    .comment {
+        margin-top: 25px;
+    }
+
+    #reviews-row-1 {
+        display: block;
+        margin-top: 3px;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+
+    #reviews-row-2 {
+        display: block;
+        margin-top: 3px;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+
+    #page-content {
+        display: flex;
+        justify-content: space-evenly;
+        max-width: fit-content;
+    }
+
+    /*#contact-section {
+        gap: 30px;
+    }*/
+}
+
+@media (max-width: 1020px) {
+
+    #page-content-reviews {
+        margin-top: -15px;
+        display: block;
+        justify-items: center; /* Moves all the comments to the center horizontally*/
+    }
+
+    /*#contact-section {
+        display: block;
+        margin: 15px;
+    }
+
+    .info-section {
+        width: 400px;
+    }*/
+}
+
+/*@media (max-width: 610px) {
+
+}*/

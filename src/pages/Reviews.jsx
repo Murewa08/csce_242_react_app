@@ -4,8 +4,8 @@ import ReviewsHeader from "../images/ReviewsHeader.png";
 const Reviews = () => {
     return (
         <body>
-        <img id="header-img" src={ReviewsHeader}/>
         <main id="page-content-reviews">
+        <img id="header-img" src={ReviewsHeader}/>
             <div id="reviews-row-1">
                 <div class="review">
                     <div class="stars-row">

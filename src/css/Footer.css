@@ -26,3 +26,15 @@
     height: 200px;
     width: 310px;
 }
+
+@media (max-width: 1020px) {
+    #main-footer {
+        display: block;
+        height: fit-content;
+    }
+
+    .info-section {
+        margin: 15px;
+        justify-self: center;
+    }
+}
