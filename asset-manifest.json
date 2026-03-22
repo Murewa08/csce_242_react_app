@@ -1,13 +1,23 @@
 {
   "files": {
-    "main.css": "/csce_242_react_app/static/css/main.be6ea011.css",
-    "main.js": "/csce_242_react_app/static/js/main.3b242c14.js",
+    "main.css": "/csce_242_react_app/static/css/main.ad8737d8.css",
+    "main.js": "/csce_242_react_app/static/js/main.c66545f5.js",
+    "static/media/TokyoImage.png": "/csce_242_react_app/static/media/TokyoImage.81a1d9d2c7a4091a95e2.png",
+    "static/media/BaliImage.png": "/csce_242_react_app/static/media/BaliImage.a3714ff2c9a2e53a878b.png",
+    "static/media/NewYorkImage.png": "/csce_242_react_app/static/media/NewYorkImage.61c113f70240e7d771f3.png",
+    "static/media/HeaderImage.png": "/csce_242_react_app/static/media/HeaderImage.966e27d859538cc7a807.png",
+    "static/media/AboutUsHeaderImage.png": "/csce_242_react_app/static/media/AboutUsHeaderImage.109a4aeb1db1bc532435.png",
+    "static/media/FAQHeader5.png": "/csce_242_react_app/static/media/FAQHeader5.0a59e4df61518ce7c06b.png",
+    "static/media/ReviewsHeader.png": "/csce_242_react_app/static/media/ReviewsHeader.edf5854f7f4bc3160c1c.png",
+    "static/media/AustraliaImage.jpg": "/csce_242_react_app/static/media/AustraliaImage.494588a0142f0787ff2d.jpg",
+    "static/media/EnglandImage.webp": "/csce_242_react_app/static/media/EnglandImage.208fa8824a540a41ebca.webp",
+    "static/media/SwitzerlandImage.webp": "/csce_242_react_app/static/media/SwitzerlandImage.26209ca567642cde9379.webp",
     "index.html": "/csce_242_react_app/index.html",
-    "main.be6ea011.css.map": "/csce_242_react_app/static/css/main.be6ea011.css.map",
-    "main.3b242c14.js.map": "/csce_242_react_app/static/js/main.3b242c14.js.map"
+    "main.ad8737d8.css.map": "/csce_242_react_app/static/css/main.ad8737d8.css.map",
+    "main.c66545f5.js.map": "/csce_242_react_app/static/js/main.c66545f5.js.map"
   },
   "entrypoints": [
-    "static/css/main.be6ea011.css",
-    "static/js/main.3b242c14.js"
+    "static/css/main.ad8737d8.css",
+    "static/js/main.c66545f5.js"
   ]
 }
