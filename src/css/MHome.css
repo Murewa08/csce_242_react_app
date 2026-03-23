@@ -73,6 +73,15 @@ footer {
     align-content: center;
 }
 
+footer a {
+    color: #FCF9C5;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #CFCFE1;
+}
+
 #btn-account {
     background: #F6A67D;
     border-radius: 40px;
@@ -90,11 +99,14 @@ footer {
     background: #DD9571;
 }
 
-footer a {
-    color: #FCF9C5;
-    text-decoration: none;
-}
+@media (max-width: 1200px) {
+    .destinations-row {
+        flex-direction: column;
+        gap: 50px;
+        margin: 50px 0;
+    }
 
-footer a:hover {
-    color: #CFCFE1;
+    .dest-info p {
+        justify-self: center;
+    }
 }

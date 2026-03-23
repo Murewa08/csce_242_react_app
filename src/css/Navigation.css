@@ -14,11 +14,9 @@
 
 ul {
     list-style-type: none;
-    /*justify-content: left;*/
     display: flex;
     gap: 20px;
-    margin-left: auto;
-    margin-right: 20px;
+    margin-left: 200px;
     font-size: x-large;
 }
 

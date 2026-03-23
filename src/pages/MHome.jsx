@@ -1,4 +1,5 @@
 import "../css/MHome.css";
+import {Link} from "react-router-dom";
 import NewYorkImage from "../images/NewYorkImage.png";
 import HeaderImage from "../images/HeaderImage.png";
 import TokyoImage from "../images/TokyoImage.png";
@@ -7,19 +8,19 @@ import EnglandImage from "../images/EnglandImage.webp";
 import SwitzerlandImage from "../images/SwitzerlandImage.webp";
 import AustraliaImage from "../images/AustraliaImage.jpg";
 
-const MHelp = () => {
+const MHome = () => {
     return (
     <body id="content">
         <main id="page-content-mhome">
             <img id="header-img" src={HeaderImage}/>
             <div class="destinations-row">
                 <div class="dest-info">
-                    <a href="help-index.html">
+                    <Link to="/Help">
                         <img src={NewYorkImage}/>
-                    </a>
-                    <a href="help-index.html">
+                    </Link>
+                    <Link to="/Help">
                         <p>New York, US</p>
-                    </a>
+                    </Link>
                 </div>
                 <div class="dest-info">
                     <img src={TokyoImage}/>
@@ -47,12 +48,12 @@ const MHelp = () => {
             <p id="main-question">Ready to plan your next Adventure?</p>
         </main>
         <footer>
-            <a id="btn-account" href="#">Create An Account Today</a>
-            <p id="login-link">Already Have One? <a href="#">Login Here</a></p>
-            <p>&copy; 2026 Meradiya. All rights reserved.</p>
-        </footer>
+        <a id="btn-account" href="#">Create An Account Today</a>
+        <p id="login-link">Already Have One? <a href="#">Login Here</a></p>
+        <p>&copy; 2026 Meradiya. All rights reserved.</p>
+    </footer> 
     </body>
     );
     }
 
-export default MHelp;
+export default MHome;
