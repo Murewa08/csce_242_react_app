@@ -31,6 +31,7 @@
     #main-footer {
         display: block;
         height: fit-content;
+        margin-top: 0px;
     }
 
     .info-section {

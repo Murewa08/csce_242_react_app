@@ -111,9 +111,9 @@ body {
         max-width: fit-content;
     }
 
-    /*#contact-section {
-        gap: 30px;
-    }*/
+    #header-img {
+        margin-top: 0px;
+    }
 }
 
 @media (max-width: 1020px) {

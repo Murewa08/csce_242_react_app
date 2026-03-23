@@ -90,16 +90,24 @@ label {
 @media (max-width: 1020px) {
     main {
         display: block;
-        justify-content: space-evenly;
     }
 
     .box {
-        justify-self: center;
         height: 550px;
     }
 
+    #contact-form-box {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #google-map {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     main {
-        margin-top: -5%;
+        margin-top: -1%;
         margin-bottom: -5%;
     }
     /*

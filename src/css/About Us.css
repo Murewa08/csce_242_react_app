@@ -114,3 +114,10 @@ body {
     margin-top: 20px;
     font-family: "Playfair Display", sans-serif;
 }
+
+@media (max-width: 1020px) {
+
+    .card {
+        height: fit-content;
+    }
+}
