@@ -83,10 +83,6 @@ label {
     margin-right: 100px;
 }
 
-#map {
-    height: 400px;
-}
-
 @media (max-width: 1020px) {
     main {
         display: block;
@@ -97,11 +93,6 @@ label {
     }
 
     #contact-form-box {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #google-map {
         margin-left: auto;
         margin-right: auto;
     }
