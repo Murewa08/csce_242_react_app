@@ -11,7 +11,6 @@ const ContactForm = () => {
 
     const form = e.target;
   const formData = new FormData(form);
-  formData.append("access_key", "a873e42a-e7cc-4fe6-8e7d-c6db872b0e77");
 
   setLoading(true);
 
