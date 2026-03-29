@@ -11,7 +11,6 @@ const Help = () => {
         <div className="box" id="google-map">*/}
             <Map/>
         {/*</div>*/}
-        <script src="Help.js"></script>
     </main>
     );
 };
