@@ -7,7 +7,7 @@ import Home from "../src/pages/Home";
 import About from "../src/pages/About";
 import MHome from "../src/pages/MHome";
 import Reviews from "../src/pages/Reviews";
-import AboutUs from "../src/pages/About Us";
+import AboutUs from "../src/pages/AboutUs";
 import FAQ from "../src/pages/FAQ";
 import Help from "../src/pages/Help";
 import Listings from "../src/pages/Listings";

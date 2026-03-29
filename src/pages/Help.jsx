@@ -4,17 +4,15 @@ import ContactForm from "../components/ContactForm";
 
 const Help = () => {
     return (
-    <body>
-        <main>
-            <div className="box" id="contact-form-box">
-                <ContactForm/>
-            </div>
-            <div className="box" id="google-map">
-                <Map/>
-            </div>
-        </main>
+    <main>
+        {/*<div className="box" id="contact-form-box">*/}
+            <ContactForm/>
+        {/*</div>
+        <div className="box" id="google-map">*/}
+            <Map/>
+        {/*</div>*/}
         <script src="Help.js"></script>
-    </body>
+    </main>
     );
 };
 
