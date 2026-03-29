@@ -37,7 +37,7 @@ const Help = () => {
                 <Map/>
             </div>
         </main>
-        {/*<script src="script.js"></script>*/}
+        <script src="Help.js"></script>
     </body>
     );
 };
