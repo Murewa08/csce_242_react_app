@@ -2,14 +2,17 @@ import "../css/Navigation.css";
 import {Link} from "react-router-dom";
 import {useState} from "react";
 const Navigation = () => {
+    const [isOpen, setIsOpen] = useState(false);
 
+    const openNav = () => setIsOpen(true);
+    const closeNav = () => setIsOpen(false);
     return (
         <nav id="main-nav">
             <div id="nav-toggle">
-                <button id="toggle-open" className="toggle">Open &rarr;</button>
-                <button id="toggle-close" className="toggle">Close &larr;</button>
+                {!isOpen && (<button id="toggle-open" className="toggle" onClick={openNav}>Open &rarr;</button>)}
+                {isOpen && (<button id="toggle-close" className="toggle" onClick={closeNav}>Close &larr;</button>)}
             </div>
-            <ul>
+            <ul className={isOpen ? "nav-open" : ""}>
                 {/*<li><Link to="/">Home</Link></li>
                 <li><Link to="/About">About</Link></li>*/}
                 <li><Link to="/MHome">Home</Link></li>

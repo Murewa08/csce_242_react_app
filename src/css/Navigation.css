@@ -12,6 +12,10 @@
     color: #AA336A;
 }
 
+#nav-toggle {
+    display: none;
+}
+
 ul {
     list-style-type: none;
     display: flex;
@@ -42,6 +46,14 @@ ul li {
 }
 
 @media (max-width: 1020px) {
+    #nav-toggle {
+        display: block;
+    }
+
+    .toggle {
+        display: block;
+    }
+    
     #main-nav {
         display: block;
         text-align: center;
@@ -59,11 +71,16 @@ ul li {
         border-top: 1.5px solid gray;
     }
 
-    #toggle-open {
+    #main-nav ul.nav-open {
+        display: block;
+    }
+
+    /*#toggle-open {
         display: block;
     }
 
     #toggle-close {
         display: none;
-    }
+    }*/
+
 }
