@@ -4,6 +4,12 @@
     color: #6B7A8F;
 }
 
+.toggle {
+    display: block;
+    background: transparent;
+    color: #6B7A8F;
+    font-size: larger;
+}
 @media (max-width: 1020px) {
     #main-header {
         display: block;
