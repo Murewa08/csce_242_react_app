@@ -1,16 +1,29 @@
 import "../css/AboutUs.css";
+import {useState} from "react";
 import AboutUsHeaderImage from "../images/AboutUsHeaderImage.png";
+import AboutUsHeader2 from "../images/AboutUsHeader2.png";
+import AboutUsHeader3 from "../images/AboutUsHeader3.png";
 
 const AboutUs = () => {
+    const images = [AboutUsHeaderImage, AboutUsHeader2, AboutUsHeader3];
+
+    const [index, setIndex] = useState(0);
+
+    const prevSlide = () => {
+        setIndex((currentSlideIndex) => currentSlideIndex === 0 ? images.length-1 : currentSlideIndex - 1);
+    };
+
+    const nextSlide = () => {
+        setIndex((currentSlideIndex) => currentSlideIndex === images.length - 1 ? 0 : currentSlideIndex + 1);
+    };
+
     return (
         <body>
             <div id="slideshow">
-                {/*<button id="previous" class="arrow" type="button">&lt;</button>
-                <button id="next" class="arrow" type="button">&gt;</button>*/}
+                <button id="previous" className="arrow" type="button" onClick={prevSlide}>&lt;</button>
+                <button id="next" className="arrow" type="button" onClick={nextSlide}>&gt;</button>
                 <div id="slides">
-                    <img src={AboutUsHeaderImage} alt="cliff"/>
-                    {/*<img src={"images/About Us Image 2.png"} alt="zip lining" class="hidden"/>
-                    <img src={"images/About Us Image 3.png"} alt="restaurant" class="hidden" id="image-3"/>*/}
+                    <img src={images[index]} alt="slide"/>
                 </div>
             </div>
             <main id="page-content-AboutUs">
