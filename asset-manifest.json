@@ -1,23 +1,25 @@
 {
   "files": {
-    "main.css": "/csce_242_react_app/static/css/main.7ccbdbb7.css",
-    "main.js": "/csce_242_react_app/static/js/main.356c93aa.js",
+    "main.css": "/csce_242_react_app/static/css/main.b888fd83.css",
+    "main.js": "/csce_242_react_app/static/js/main.b385ce13.js",
     "static/media/TokyoImage.png": "/csce_242_react_app/static/media/TokyoImage.81a1d9d2c7a4091a95e2.png",
     "static/media/BaliImage.png": "/csce_242_react_app/static/media/BaliImage.a3714ff2c9a2e53a878b.png",
     "static/media/NewYorkImage.png": "/csce_242_react_app/static/media/NewYorkImage.61c113f70240e7d771f3.png",
     "static/media/HeaderImage.png": "/csce_242_react_app/static/media/HeaderImage.966e27d859538cc7a807.png",
+    "static/media/AboutUsHeader2.png": "/csce_242_react_app/static/media/AboutUsHeader2.e5049ca619749b0ba634.png",
     "static/media/AboutUsHeaderImage.png": "/csce_242_react_app/static/media/AboutUsHeaderImage.109a4aeb1db1bc532435.png",
     "static/media/FAQHeader5.png": "/csce_242_react_app/static/media/FAQHeader5.0a59e4df61518ce7c06b.png",
     "static/media/ReviewsHeader.png": "/csce_242_react_app/static/media/ReviewsHeader.edf5854f7f4bc3160c1c.png",
+    "static/media/AboutUsHeader3.png": "/csce_242_react_app/static/media/AboutUsHeader3.3b6de8a301aa7f9101eb.png",
     "static/media/AustraliaImage.jpg": "/csce_242_react_app/static/media/AustraliaImage.494588a0142f0787ff2d.jpg",
     "static/media/EnglandImage.webp": "/csce_242_react_app/static/media/EnglandImage.208fa8824a540a41ebca.webp",
     "static/media/SwitzerlandImage.webp": "/csce_242_react_app/static/media/SwitzerlandImage.26209ca567642cde9379.webp",
     "index.html": "/csce_242_react_app/index.html",
-    "main.7ccbdbb7.css.map": "/csce_242_react_app/static/css/main.7ccbdbb7.css.map",
-    "main.356c93aa.js.map": "/csce_242_react_app/static/js/main.356c93aa.js.map"
+    "main.b888fd83.css.map": "/csce_242_react_app/static/css/main.b888fd83.css.map",
+    "main.b385ce13.js.map": "/csce_242_react_app/static/js/main.b385ce13.js.map"
   },
   "entrypoints": [
-    "static/css/main.7ccbdbb7.css",
-    "static/js/main.356c93aa.js"
+    "static/css/main.b888fd83.css",
+    "static/js/main.b385ce13.js"
   ]
 }
