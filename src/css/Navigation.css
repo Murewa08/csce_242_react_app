@@ -26,9 +26,6 @@ ul li {
     /*text-decoration: none;*/
 }
 
-#toggle-nav {
-    display: none;
-}
 
 @media (max-width: 1020px) {
     #main-nav {
@@ -48,9 +45,4 @@ ul li {
         border-top: 1.5px solid gray;
     }
 
-    #toggle-nav {
-        display: block;
-        font-size: 40px;
-        color: #6B7A8F;
-    }
 }
