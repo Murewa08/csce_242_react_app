@@ -2,7 +2,7 @@
     background: #FCF5E8;
     border: 2px solid orange;
     border-radius: 5px;
-    width: 400px;
+    width: 410px;
     height: 600px;
     margin-top: 5%;
     margin-bottom: 5%;
@@ -54,4 +54,11 @@
 #submit-btn:hover {
     cursor: pointer;
     background: #974E67;
+}
+
+@media (max-width: 1020px) {
+    #contact-form-box {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

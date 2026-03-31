@@ -1,5 +1,22 @@
 #map {
     display: block;
-    height: 400px;
-    
+    background: #FCF5E8;
+    border: 2px solid orange;
+    border-radius: 5px;
+    width: 400px;
+    height: 600px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+#map p {
+    font-size: 24px;
+}
+
+@media (max-width: 1020px) {
+    #map {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
