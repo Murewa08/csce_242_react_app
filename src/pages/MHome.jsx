@@ -1,4 +1,5 @@
 import "../css/MHome.css";
+import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import NewYorkImage from "../images/NewYorkImage.png";
 import HeaderImage from "../images/HeaderImage.png";
@@ -9,38 +10,36 @@ import SwitzerlandImage from "../images/SwitzerlandImage.webp";
 import AustraliaImage from "../images/AustraliaImage.jpg";
 
 const MHome = () => {
+    const [showModal, setShowModal] = useState(false);
+
     return (
-    <body id="content">
+    <div id="content">
         <main id="page-content-mhome">
             <img id="header-img" src={HeaderImage}/>
-            <div class="destinations-row">
-                <div class="dest-info">
-                    <Link to="/Help">
-                        <img src={NewYorkImage}/>
-                    </Link>
-                    <Link to="/Help">
-                        <p>New York, US</p>
-                    </Link>
+            <div className="destinations-row">
+                <div className="dest-info" onClick={() => setShowModal(true)}>
+                    <img src={NewYorkImage}/>
+                    <p>New York, US</p>
                 </div>
-                <div class="dest-info">
+                <div className="dest-info" onClick={() => setShowModal(true)}>
                     <img src={TokyoImage}/>
                     <p>Tokyo, Japan</p>
                 </div>
-                <div class="dest-info">
+                <div className="dest-info" onClick={() => setShowModal(true)}>
                     <img src={BaliImage}/>
                     <p>Bali, Indonesia</p>
                 </div>
             </div>
-            <div class="destinations-row" id="row-2">
-                <div class="dest-info">
+            <div className="destinations-row" id="row-2">
+                <div className="dest-info" onClick={() => setShowModal(true)}>
                     <img src={EnglandImage}/>
                     <p>England, UK</p>
                 </div>
-                <div class="dest-info">
+                <div className="dest-info" onClick={() => setShowModal(true)}   >
                     <img src={SwitzerlandImage}/>
                     <p>Bern, Switzerland</p>
                 </div>
-                <div class="dest-info">
+                <div className="dest-info" onClick={() => setShowModal(true)}>
                     <img src={AustraliaImage}/>
                     <p>Sydney, Australia</p>
                 </div>
@@ -48,11 +47,14 @@ const MHome = () => {
             <p id="main-question">Ready to plan your next Adventure?</p>
         </main>
         <footer>
-        <a id="btn-account" href="#">Create An Account Today</a>
-        <p id="login-link">Already Have One? <a href="#">Login Here</a></p>
-        <p>&copy; 2026 Meradiya. All rights reserved.</p>
-    </footer> 
-    </body>
+            <a id="btn-account" href="#">Create An Account Today</a>
+            <p id="login-link">Already Have One? <a href="#">Login Here</a></p>
+            <p>&copy; 2026 Meradiya. All rights reserved.</p>
+        </footer>
+        {showModal && (<div className="modal">
+            <p>This is the modal content.</p>
+        </div>)} 
+    </div>
     );
     }
 
