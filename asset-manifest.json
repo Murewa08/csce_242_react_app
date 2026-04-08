@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/csce_242_react_app/static/css/main.9cb55192.css",
-    "main.js": "/csce_242_react_app/static/js/main.533d5c6b.js",
+    "main.css": "/csce_242_react_app/static/css/main.a10feb96.css",
+    "main.js": "/csce_242_react_app/static/js/main.2058ed73.js",
     "static/media/TokyoImage.png": "/csce_242_react_app/static/media/TokyoImage.81a1d9d2c7a4091a95e2.png",
     "static/media/BaliImage.png": "/csce_242_react_app/static/media/BaliImage.a3714ff2c9a2e53a878b.png",
     "static/media/NewYorkImage.png": "/csce_242_react_app/static/media/NewYorkImage.61c113f70240e7d771f3.png",
@@ -15,11 +15,11 @@
     "static/media/EnglandImage.webp": "/csce_242_react_app/static/media/EnglandImage.208fa8824a540a41ebca.webp",
     "static/media/SwitzerlandImage.webp": "/csce_242_react_app/static/media/SwitzerlandImage.26209ca567642cde9379.webp",
     "index.html": "/csce_242_react_app/index.html",
-    "main.9cb55192.css.map": "/csce_242_react_app/static/css/main.9cb55192.css.map",
-    "main.533d5c6b.js.map": "/csce_242_react_app/static/js/main.533d5c6b.js.map"
+    "main.a10feb96.css.map": "/csce_242_react_app/static/css/main.a10feb96.css.map",
+    "main.2058ed73.js.map": "/csce_242_react_app/static/js/main.2058ed73.js.map"
   },
   "entrypoints": [
-    "static/css/main.9cb55192.css",
-    "static/js/main.533d5c6b.js"
+    "static/css/main.a10feb96.css",
+    "static/js/main.2058ed73.js"
   ]
 }
