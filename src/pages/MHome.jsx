@@ -16,6 +16,7 @@ const MHome = () => {
     <div id="content">
         <main id="page-content-mhome">
             <img id="header-img" src={HeaderImage}/>
+            <button id="add-dest-btn">+ Add Destination</button>
             <div className="destinations-row">
                 <div className="dest-info" onClick={() => setShowModal(true)}>
                     <img src={NewYorkImage}/>
@@ -51,7 +52,9 @@ const MHome = () => {
             <p id="login-link">Already Have One? <a href="#">Login Here</a></p>
             <p>&copy; 2026 Meradiya. All rights reserved.</p>
         </footer>
-        {showModal && (<div className="modal">
+        {showModal && 
+        (<div className="modal">
+            <button id="close-button" onClick={() => setShowModal(false)}>X</button>
             <p>This is the modal content.</p>
         </div>)} 
     </div>
