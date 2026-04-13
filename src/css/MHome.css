@@ -130,7 +130,7 @@ footer a:hover {
     border: 2px solid black;
 }
 
-#close-button {
+#modal-close-button {
     background: lightcoral;
     border-top-right-radius: 15px;
     margin-left: 275px;
@@ -140,10 +140,75 @@ footer a:hover {
     cursor: pointer;
 }
 
-#close-button:hover {
+#modal-close-button:hover {
     background: darkred;
 }
 
+/*Form Modal Design*/
+.form-modal {
+    font-size: 25px;
+    font-weight: 500;
+    background: #FAE3E9;
+    border-radius: 15px;
+    width: 400px;
+    height: 500px;
+    border: 2px solid orange;
+    top: 5%;
+    left: 35%;
+    position: fixed;
+    text-align: center;
+}
+
+.form-modal p {
+    text-decoration: underline;
+    margin-top: -5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#form-close-button {
+    background: lightcoral;
+    border-top-right-radius: 15px;
+    margin-left: 365px;
+    width: 35px;
+    height: 35px;
+    margin-top: -20px;
+    cursor: pointer;
+}
+#form-close-button:hover {
+    background: darkred;
+}
+
+#form-submit-btn {
+    background: lightcoral;
+    border-radius: 5px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#form-submit-btn:hover {
+    background: darkred;
+}
+
+input {
+    border: 1.5px solid black;
+}
+
+textarea {
+    height: 100px;
+    border: 1.5px solid black;
+}
 @media (max-width: 1200px) {
     .destinations-row {
         flex-direction: column;
