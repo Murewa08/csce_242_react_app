@@ -13,17 +13,34 @@ const MHome = () => {
     const [showModal, setShowModal] = useState(false);
     const [showDestModal, setShowDestModal] = useState(false);
 
+    const handleFileUpload = (e) => {
+        const file = e.target.files[0];
+
+        const validTypes = ["image/jpeg", "image/png"];
+
+        if(!validTypes.includes(file.type))
+        {
+            alert("Invalid file type. Please upload a JPEG or PNG image.");
+            return;
+        }
+
+        setFormData({...formData, image: file});
+    };
+
     const [formData, setFormData] = useState({
         city: "",
         country: "",
-        description: ""
+        description: "",
+        image: null
     });
 
     return (
     <div id="content">
         <main id="page-content-mhome">
             <img id="header-img" src={HeaderImage}/>
+            <button id="previous" className="arrows" type="button">&lt;</button>
             <button id="add-dest-btn" onClick={() => setShowDestModal(true)}>+ Add Destination</button>
+            <button id="next" className="arrows" type="button">&gt;</button>
             <div className="destinations-row">
                 <div className="dest-info" onClick={() => setShowModal(true)}>
                     <img src={NewYorkImage}/>
@@ -79,7 +96,11 @@ const MHome = () => {
                     </div>
                     <div className="form-section">
                         <label>Description: </label>
-                        <textarea type="text" name="description">Type here...</textarea>
+                        <textarea type="text" name="description" placeholder="Type here..."></textarea>
+                    </div>
+                    <div className="form-section">
+                        <label>Upload Image: </label>
+                        <input type="file" name="image" accept=".jpeg, .jpg, .png" onChange={handleFileUpload}/>
                     </div>
                     <button type="submit" id="form-submit-btn">Submit</button>
                 </form>

@@ -117,6 +117,31 @@ footer a:hover {
     background: lightgray;
     cursor: pointer;
 }
+
+.arrows {
+    display:block;
+    font-size:4em;
+    text-decoration: none;
+    font-weight: 300;
+    position:absolute;
+    top:105%;
+    color: white;
+    background: transparent;
+    border: 0px transparent;
+}
+
+.arrows:hover {
+    color: #AA336A;
+    cursor: pointer;
+}
+#previous{
+    left:5%;
+}
+
+#next {
+    right:5%;
+}
+
 /*Modal view design*/
 .modal {
     /*margin-top: 20px;*/
@@ -206,7 +231,7 @@ input {
 }
 
 textarea {
-    height: 100px;
+    height: 80px;
     border: 1.5px solid black;
 }
 @media (max-width: 1200px) {
