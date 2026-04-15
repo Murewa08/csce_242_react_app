@@ -12,6 +12,13 @@ import AustraliaImage from "../images/AustraliaImage.jpg";
 const MHome = () => {
     const [showModal, setShowModal] = useState(false);
     const [showDestModal, setShowDestModal] = useState(false);
+    const [destinations, setDestinations] = useState([]);
+    const [selectedDestination, setSelectedDestination] = useState(null);
+
+    useEffect(() => {fetch("https://csce-242-demo-backend.onrender.com/api/destinations").then((res) => res.json())
+            .then((data) => setDestinations(data))
+            .catch((err) => console.error(err));
+                    }, []);
 
     const handleFileUpload = (e) => {
         const file = e.target.files[0];
@@ -42,7 +49,12 @@ const MHome = () => {
             <button id="add-dest-btn" onClick={() => setShowDestModal(true)}>+ Add Destination</button>
             <button id="next" className="arrows" type="button">&gt;</button>
             <div className="destinations-row">
-                <div className="dest-info" onClick={() => setShowModal(true)}>
+                <div className="dest-info" onClick={() => setSelectedDestination({
+                    city: "New York City",
+                    country: "United States",
+                    description: "New York City is one of the most iconic cities in the world, known for its towering skyline, diverse culture, and nonstop energy. From the bright lights of Times Square to the peaceful paths of Central Park, the city offers something for everyone.",
+                    image: NewYorkImage})}>
+
                     <img src={NewYorkImage}/>
                     <p>New York, US</p>
                 </div>
@@ -76,11 +88,19 @@ const MHome = () => {
             <p id="login-link">Already Have One? <a href="#">Login Here</a></p>
             <p>&copy; 2026 Meradiya. All rights reserved.</p>
         </footer>
-        {showModal && 
+        {selectedDestination && 
         (<div className="modal">
-            <button id="modal-close-button" onClick={() => setShowModal(false)}>X</button>
-            <p>This is the modal content.</p>
+            <div id="modal-content">
+                <img src={selectedDestination.image} alt={selectedDestination.city}/>
+                <div id="modal-info">
+                    <button id="modal-close-button" onClick={() => setSelectedDestination(null)}>X</button>
+                    <h2>City: {selectedDestination.city}</h2>
+                    <h2>Country: {selectedDestination.country}</h2>
+                    <p>Description: {selectedDestination.description}</p>
+                </div>
+            </div>
         </div>)}
+
         {showDestModal && (
             <div className="form-modal">
                 <button id="form-close-button" onClick={() => setShowDestModal(false)}>X</button>
