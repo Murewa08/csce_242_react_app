@@ -17,6 +17,8 @@ const MHome = () => {
     const [showArrows, setShowArrows] = useState(false);
     const [addedDestination, setAddedDestination] = useState(false);
     const [showNewRow, setShowNewRow] = useState(false);
+    const [deletedDestination, setDeletedDestination] = useState(null);
+    const [deletedDestinations, setDeletedDestinations] = useState([]);
 
     useEffect(() => {fetch("https://csce-242-demo-backend.onrender.com/api/destinations").then((res) => res.json())
             .then((data) => setDestinations(data))
@@ -37,6 +39,13 @@ const MHome = () => {
         setFormData({...formData, image: file}); 
     };
 
+    const handleDeletedDestination = (selectedDestination) => {
+        //alert(selectedDestination)
+        //setDeletedDestination(selectedDestination);
+        setDeletedDestinations([...deletedDestinations, selectedDestination.name]);
+        alert(`${selectedDestination.name} has been deleted.`);
+        //setSelectedDestination(null);
+    };
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
@@ -105,6 +114,8 @@ const MHome = () => {
                             img_name: NewYorkImage
                             })}>
                             <img src={NewYorkImage} alt="New York" />
+                            <button className="edit-btn">&#9999;</button>
+                            <button id="delete-button" onClick={handleDeletedDestination}>X</button>
                             <p>New York, US</p>
                         </div>
 

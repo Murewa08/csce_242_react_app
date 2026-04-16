@@ -33,6 +33,32 @@
     margin: 80px 0;
 }
 
+.edit-btn {
+    background: lightgoldenrodyellow;
+    cursor: pointer;
+    position: absolute;
+    left: 350px;
+    width: 30px;
+    height: 30px;
+}
+
+.edit-btn:hover {
+    background: gold;
+}
+
+#delete-button {
+    background: white;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 380px;
+    border-top-right-radius: 15px;
+}
+
+#delete-button:hover {
+    background: red;
+}
 .dest-info img {
     width: 384.6px;
     height: 256.4px;
