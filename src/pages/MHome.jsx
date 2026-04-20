@@ -17,8 +17,8 @@ const MHome = () => {
     const [showArrows, setShowArrows] = useState(false);
     const [addedDestination, setAddedDestination] = useState(false);
     const [showNewRow, setShowNewRow] = useState(false);
-    const [deletedDestination, setDeletedDestination] = useState(null);
-    const [deletedDestinations, setDeletedDestinations] = useState([]);
+    //const [deletedDestination, setDeletedDestination] = useState(null);
+    //const [deletedDestinations, setDeletedDestinations] = useState([]);
 
     useEffect(() => {fetch("https://csce-242-demo-backend.onrender.com/api/destinations").then((res) => res.json())
             .then((data) => setDestinations(data))
@@ -39,13 +39,49 @@ const MHome = () => {
         setFormData({...formData, image: file}); 
     };
 
-    const handleDeletedDestination = (selectedDestination) => {
-        //alert(selectedDestination)
-        //setDeletedDestination(selectedDestination);
-        setDeletedDestinations([...deletedDestinations, selectedDestination.name]);
-        alert(`${selectedDestination.name} has been deleted.`);
-        //setSelectedDestination(null);
+    const getImageSrc = (imgName) => typeof imgName === "string" && imgName.startsWith("images/") ? `https://csce-242-demo-backend.onrender.com/${imgName}` : imgName;
+
+    const handleDelete = async (e, id) => {
+        e.stopPropagation();
+
+        try 
+        {
+            const response = await fetch(`https://csce-242-demo-backend.onrender.com/api/destinations/${id}`,
+                {
+                    method: "DELETE",
+                }
+            );
+
+            if(!response.ok)
+            {
+                const text = await response.text();
+                throw new Error(text);
+            }
+
+            setDestinations((prev) => prev.filter((dest) => dest._id !== id));
+            alert(`Destination deleted successfully!`);
+        }
+        catch(error) {
+            console.error("DELETE error:", error);
+            alert("Could not delete destination.");
+        }
     };
+
+    const renderDestinationCard = (dest) => (
+        <div className="dest-info" key={dest._id} onClick={() => setSelectedDestination(dest)}>
+            <img src={getImageSrc(dest.img_name)} alt={dest.name}/>
+
+            <button className="edit-button" type="button" onClick={(e) => e.stopPropagation()}>
+                &#9999;
+            </button>
+
+            <button className="delete-button" type="button" onClick={(e) => handleDelete(e, dest._id)}>
+                X
+            </button>
+
+            <p>{dest.name}, {dest.country}</p>
+        </div>
+    );
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
@@ -105,7 +141,8 @@ const MHome = () => {
             {showArrows && (<button id="next" className="arrows" type="button" onClick={() => setShowNewRow((prev) => !prev)}>&gt;</button>)}
 
             <div className="destinations-row">
-                {!showNewRow ? (
+                {destinations.slice(0, 3).map(renderDestinationCard)}
+                {/*{!showNewRow ? (
                     <>
                         <div className="dest-info" onClick={() => setSelectedDestination({
                             name: "New York City",
@@ -115,7 +152,6 @@ const MHome = () => {
                             })}>
                             <img src={NewYorkImage} alt="New York" />
                             <button className="edit-btn">&#9999;</button>
-                            <button id="delete-button" onClick={handleDeletedDestination}>X</button>
                             <p>New York, US</p>
                         </div>
 
@@ -144,10 +180,11 @@ const MHome = () => {
                             ? `https://csce-242-demo-backend.onrender.com/${addedDestination.img_name}`
                             : addedDestination.img_name} alt={addedDestination.name}/>
                         <p>{addedDestination.name}, {addedDestination.country}</p>
-                    </div>)}
+                    </div>)}*/}
             </div>
             <div className="destinations-row" id="row-2">
-                <div className="dest-info" onClick={() => setSelectedDestination({
+                {destinations.slice(3, 6).map(renderDestinationCard)}
+                {/*<div className="dest-info" onClick={() => setSelectedDestination({
                     name: "England",
                     country: "UK",
                     short_desc: "England is a country in the United Kingdom, known for its rich history, beautiful countryside, and vibrant cities. From the historic castles of Warwickshire to the bustling streets of London, the country offers a unique experience for every visitor.",
@@ -170,7 +207,7 @@ const MHome = () => {
                     img_name: AustraliaImage})}>
                     <img src={AustraliaImage}/>
                     <p>Sydney, Australia</p>
-                </div>
+                </div>*/}
             </div>
             <p id="main-question">Ready to plan your next Adventure?</p>
         </main>
