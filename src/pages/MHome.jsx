@@ -19,11 +19,79 @@ const MHome = () => {
     const [showNewRow, setShowNewRow] = useState(false);
     //const [deletedDestination, setDeletedDestination] = useState(null);
     //const [deletedDestinations, setDeletedDestinations] = useState([]);
+    const [showEditModal, setShowEditModal] = useState(false);
+    const [editingDestination, setEditingDestination] = useState(null);
+    const [editFormData, setEditFormData] = useState({
+        name: "",
+        country: "",
+        short_desc: "",
+        image: null
+    });
 
     useEffect(() => {fetch("https://csce-242-demo-backend.onrender.com/api/destinations").then((res) => res.json())
             .then((data) => setDestinations(data))
             .catch((err) => console.error(err));
                     }, []);
+
+    const handleEditInputChange = (e) => {
+        const {name, value} = e.target;
+        setEditFormData({...editFormData, [name]: value});
+    };
+
+    const handleEditFileUpload = (e) => {
+        const file = e.target.files[0];
+
+        const validTypes = ["image/jpeg", "image/png"];
+
+        if(!validTypes.includes(file.type))
+        {
+            alert("Invalid file type. Please upload a JPEG or PNG image.")
+            return;
+        }
+
+        setEditFormData({...editFormData, image: file});
+    };
+
+    const handleEditFormSubmit = async (e) => {
+        e.preventDefault();
+
+        const data = new FormData();
+        data.append("name", editFormData.name);
+        data.append("country", editFormData.country);
+        data.append("short_desc", editFormData.short_desc);
+
+        if(editFormData.image)
+        {
+            data.append("image", editFormData.image);
+        }
+
+        try {
+            const response = await fetch(`https://csce-242-demo-backend.onrender.com/api/destinations/${editingDestination._id}`,
+                {
+                    method: "PUT",
+                    body: data
+                }
+            );
+
+            const text = await response.text();
+            if(!response.ok)
+            {
+                throw new Error(text);
+            }
+
+            const updatedDestination = JSON.parse(text);
+
+            setDestinations((prev) => prev.map((dest) => dest._id === updatedDestination._id ? updatedDestination : dest));
+            setShowEditModal(false);
+            setEditingDestination(null);
+
+            alert("Destination updated successfully!");
+        }
+        catch(error) {
+            console.error("PUT error:", error);
+            alert(error.message || "Could not update destination.");
+        }
+    };
 
     const handleFileUpload = (e) => {
         const file = e.target.files[0];
@@ -71,8 +139,17 @@ const MHome = () => {
         <div className="dest-info" key={dest._id} onClick={() => setSelectedDestination(dest)}>
             <img src={getImageSrc(dest.img_name)} alt={dest.name}/>
 
-            <button className="edit-button" type="button" onClick={(e) => e.stopPropagation()}>
-                &#9999;
+            <button className="edit-button" type="button" onClick={(e) => {
+                e.stopPropagation()
+                setEditingDestination(dest);
+                setEditFormData({
+                    name: dest.name,
+                    country: dest.country,
+                    short_desc: dest.short_desc,
+                    image: null
+                })
+                setShowEditModal(true);
+                }}>&#9999;
             </button>
 
             <button className="delete-button" type="button" onClick={(e) => handleDelete(e, dest._id)}>
@@ -259,6 +336,34 @@ const MHome = () => {
                         <input type="file" name="image" accept=".jpeg, .jpg, .png" onChange={handleFileUpload}/>
                     </div>
                     <button type="submit" id="form-submit-btn">Submit</button>
+                </form>
+            </div>
+        )}
+
+        {showEditModal && editingDestination && (
+            <div className="form-modal">
+                <button id="form-close-button" onClick={() => {setShowEditModal(false)}}>X</button>
+                <p>Edit Destination</p>
+
+                <form onSubmit={handleEditFormSubmit}>
+                    <div className="form-section">
+                        <label>City: </label>
+                        <input type="text" name="name" value={editFormData.name} onChange={handleEditInputChange}/>
+                    </div>
+                    <div className="form-section">
+                        <label>Country: </label>
+                        <input type="text" name="country" value={editFormData.country} onChange={handleEditInputChange}/>
+                    </div>
+                    <div className="form-section">
+                        <label>Description: </label>
+                        <textarea name="short_desc" placeholder="Type here..." value={editFormData.short_desc} onChange={handleEditInputChange}></textarea>
+                    </div>
+                    <div className="form-section">
+                        <label>Upload New Image: </label>
+                        <input type="file" name="image" accept=".jpeg, .jpg, .png" onChange={handleFileUpload}/>
+                    </div>
+                    <button type="submit" id="form-submit-btn">Save Changes</button>
+
                 </form>
             </div>
         )} 
