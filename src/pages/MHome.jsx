@@ -136,9 +136,9 @@ const MHome = () => {
     <div id="content">
         <main id="page-content-mhome">
             <img id="header-img" src={HeaderImage}/>
-            {showArrows && (<button id="previous" className="arrows" type="button" onClick={() => setShowNewRow((prev) => !prev)}>&lt;</button>)}
+            {/*{showArrows && (<button id="previous" className="arrows" type="button" onClick={() => setShowNewRow((prev) => !prev)}>&lt;</button>)}*/}
             <button id="add-dest-btn" onClick={() => setShowDestModal(true)}>+ Add Destination</button>
-            {showArrows && (<button id="next" className="arrows" type="button" onClick={() => setShowNewRow((prev) => !prev)}>&gt;</button>)}
+            {/*{showArrows && (<button id="next" className="arrows" type="button" onClick={() => setShowNewRow((prev) => !prev)}>&gt;</button>)}*/}
 
             <div className="destinations-row">
                 {destinations.slice(0, 3).map(renderDestinationCard)}
@@ -209,6 +209,12 @@ const MHome = () => {
                     <p>Sydney, Australia</p>
                 </div>*/}
             </div>
+
+            {destinations.length > 6 && (
+                <div className="destinations-row" id="row-3">
+                    {destinations.slice(6).map(renderDestinationCard)}
+                </div>
+            )}
             <p id="main-question">Ready to plan your next Adventure?</p>
         </main>
         <footer>
