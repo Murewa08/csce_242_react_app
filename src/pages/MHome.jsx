@@ -1,13 +1,13 @@
 import "../css/MHome.css";
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
-import NewYorkImage from "../images/NewYorkImage.png";
+//import NewYorkImage from "../images/NewYorkImage.png";
 import HeaderImage from "../images/HeaderImage.png";
-import TokyoImage from "../images/TokyoImage.png";
+/*import TokyoImage from "../images/TokyoImage.png";
 import BaliImage from "../images/BaliImage.png";
 import EnglandImage from "../images/EnglandImage.webp";
 import SwitzerlandImage from "../images/SwitzerlandImage.webp";
-import AustraliaImage from "../images/AustraliaImage.jpg";
+import AustraliaImage from "../images/AustraliaImage.jpg";*/
 
 const MHome = () => {
     //const [showModal, setShowModal] = useState(false);
@@ -27,8 +27,8 @@ const MHome = () => {
         short_desc: "",
         image: null
     });
-
-    useEffect(() => {fetch("https://csce-242-demo-backend.onrender.com/api/destinations").then((res) => res.json())
+//https://csce-242-demo-backend.onrender.com/api/destinations
+    useEffect(() => {fetch("http://localhost:3001/api/destinations").then((res) => res.json())
             .then((data) => setDestinations(data))
             .catch((err) => console.error(err));
                     }, []);
@@ -66,7 +66,7 @@ const MHome = () => {
         }
 
         try {
-            const response = await fetch(`https://csce-242-demo-backend.onrender.com/api/destinations/${editingDestination._id}`,
+            const response = await fetch("http://localhost:3001/api/destinations",
                 {
                     method: "PUT",
                     body: data
@@ -114,7 +114,7 @@ const MHome = () => {
 
         try 
         {
-            const response = await fetch(`https://csce-242-demo-backend.onrender.com/api/destinations/${id}`,
+            const response = await fetch("http://localhost:3001/api/destinations",
                 {
                     method: "DELETE",
                 }
@@ -181,7 +181,7 @@ const MHome = () => {
     data.append("image", formData.image);
 
     try {
-        const response = await fetch("https://csce-242-demo-backend.onrender.com/api/destinations", {
+        const response = await fetch("http://localhost:3001/api/destinations", {
             method: "POST",
             body: data
         });
