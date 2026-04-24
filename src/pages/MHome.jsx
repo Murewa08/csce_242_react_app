@@ -66,7 +66,7 @@ const MHome = () => {
         }
 
         try {
-            const response = await fetch("http://localhost:3001/api/destinations",
+            const response = await fetch(`http://localhost:3001/api/destinations/${editingDestination._id}`,
                 {
                     method: "PUT",
                     body: data
@@ -107,14 +107,14 @@ const MHome = () => {
         setFormData({...formData, image: file}); 
     };
 
-    const getImageSrc = (imgName) => typeof imgName === "string" && imgName.startsWith("images/") ? `https://csce-242-demo-backend.onrender.com/${imgName}` : imgName;
+    const getImageSrc = (imgName) => `http://localhost:3001/${imgName}`;
 
     const handleDelete = async (e, id) => {
         e.stopPropagation();
 
         try 
         {
-            const response = await fetch("http://localhost:3001/api/destinations",
+            const response = await fetch(`http://localhost:3001/api/destinations/${id}`,
                 {
                     method: "DELETE",
                 }
@@ -342,7 +342,9 @@ const MHome = () => {
 
         {showEditModal && editingDestination && (
             <div className="form-modal">
-                <button id="form-close-button" onClick={() => {setShowEditModal(false)}}>X</button>
+                <button id="form-close-button" onClick={() => {
+                    setShowEditModal(false);
+                    setEditingDestination(null);}}>X</button>
                 <p>Edit Destination</p>
 
                 <form onSubmit={handleEditFormSubmit}>
@@ -360,7 +362,7 @@ const MHome = () => {
                     </div>
                     <div className="form-section">
                         <label>Upload New Image: </label>
-                        <input type="file" name="image" accept=".jpeg, .jpg, .png" onChange={handleFileUpload}/>
+                        <input type="file" name="image" accept=".jpeg, .jpg, .png" onChange={handleEditFileUpload}/>
                     </div>
                     <button type="submit" id="form-submit-btn">Save Changes</button>
 
